@@ -1871,3 +1871,64 @@ Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
 ActiveModel::UnknownAttributeError (unknown attribute 'text' for Message.):
   
 app/controllers/messages_controller.rb:6:in `create'
+Started GET "/messages" for 127.0.0.1 at 2017-10-27 21:28:57 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 163ms (Views: 156.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-27 21:29:00 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTMkBGRIw+N3TEROQSx+KtnTQCyIyqf3QPh8/D7c5lcVqufgEAG2v0k317i1u1hnRtBgiZbWEUs3ROV2v+1yaQ==", "messages"=>{"text"=>"dsfvb"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (18.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-27 18:29:00.622466"], ["updated_at", "2017-10-27 18:29:00.622466"], ["text", "dsfvb"]]
+  [1m[35m (47.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/1
+Completed 302 Found in 108ms (ActiveRecord: 82.8ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-27 21:29:00 +0300
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-27 21:29:37 +0300
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-27 21:29:43 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pTMkBGRIw+N3TEROQSx+KtnTQCyIyqf3QPh8/D7c5lcVqufgEAG2v0k317i1u1hnRtBgiZbWEUs3ROV2v+1yaQ==", "messages"=>{"text"=>"edfsvfefsdgegadb"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-27 18:29:43.053304"], ["updated_at", "2017-10-27 18:29:43.053304"], ["text", "edfsvfefsdgegadb"]]
+  [1m[35m (28.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/2
+Completed 302 Found in 32ms (ActiveRecord: 28.8ms)
+
+
+Started GET "/messages/2" for 127.0.0.1 at 2017-10-27 21:29:43 +0300
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"2"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-27 21:33:25 +0300
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 10ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
