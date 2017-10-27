@@ -1,10 +1,9 @@
 <%= form_with scope: :messages, local: true do |form| %>
-  <p>
-    <%= form.label :text %><br>
+  <p style = "text-align: center;"> Enter your message here: <br>
     <%= form.text_area :text %>
   </p>
  
-  <p>
+  <p style = "text-align: center;">
     <%= form.submit %>
   </p>
 <% end %>
