@@ -2460,3 +2460,90 @@ Processing by MessagesController#show as HTML
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(928195855926424470)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(928195855926424470)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/messages" for 127.0.0.1 at 2017-10-28 20:53:37 +0300
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (93.3ms)
+Completed 200 OK in 414ms (Views: 407.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-28 20:53:40 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HCFag1/PjZZp+qgH0Eel4I5otqf6Cs6/1NtxRiya9jgJ3lRgtlsCJXpu51GjNUp6/QvNKl8l2I+F5mZ1i2EAgQ==", "messages"=>{"text"=>"efdbv"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (19.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-28 17:53:40.327528"], ["updated_at", "2017-10-28 17:53:40.327528"], ["text", "efdbv"]]
+  [1m[35m (35.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/17
+Completed 302 Found in 112ms (ActiveRecord: 72.8ms)
+
+
+Started GET "/messages/17" for 127.0.0.1 at 2017-10-28 20:53:40 +0300
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"17"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-28 22:03:58 +0300
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (97.0ms)
+Completed 200 OK in 380ms (Views: 373.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-28 22:04:01 +0300
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"WIITv+boq0UIR7J2a85OPVpao5gpmY9vcrTiQ1CydVNNfR1cD3wk9hvT/SAYvKGnKTnYFYy2mV8jifVw90mD6g==", "messages"=>{"text"=>"wf"}, "commit"=>"Save Messages"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-28 19:04:01.473769"], ["updated_at", "2017-10-28 19:04:01.473769"], ["text", "wf"]]
+  [1m[35m (17.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/18
+Completed 302 Found in 83ms (ActiveRecord: 37.7ms)
+
+
+Started GET "/messages/18" for 127.0.0.1 at 2017-10-28 22:04:01 +0300
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"18"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(928195855926424470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(928195855926424470)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(928195855926424470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(928195855926424470)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(928195855926424470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(928195855926424470)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(928195855926424470)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(928195855926424470)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
