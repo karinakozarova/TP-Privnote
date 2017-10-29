@@ -2547,3 +2547,628 @@ Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
   [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(928195855926424470)[0m
   [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:10:30 +0200
+  [1m[35m (8.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (86.5ms)
+Completed 200 OK in 463ms (Views: 434.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:10:34 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UIxbBpv7l3cHk9peK3XB7pjoa2804xJF3MTjAgwBYGpLE7CD4gcgSCB5rx2iFgitX9N1Vc32DPUcKaTbPC1wzQ==", "messages"=>{"text"=>"d"}, "commit"=>"Save Messages"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (43.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:10:34.249169"], ["updated_at", "2017-10-29 13:10:34.249169"], ["text", "d"]]
+  [1m[35m (29.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/19
+Completed 302 Found in 201ms (ActiveRecord: 117.6ms)
+
+
+Started GET "/messages/19" for 127.0.0.1 at 2017-10-29 15:10:34 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"19"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:13:49 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UIxbBpv7l3cHk9peK3XB7pjoa2804xJF3MTjAgwBYGpLE7CD4gcgSCB5rx2iFgitX9N1Vc32DPUcKaTbPC1wzQ==", "messages"=>{"text"=>"ddwq"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:13:49.785307"], ["updated_at", "2017-10-29 13:13:49.785307"], ["text", "ddwq"]]
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/20
+Completed 302 Found in 23ms (ActiveRecord: 18.4ms)
+
+
+Started GET "/messages/20" for 127.0.0.1 at 2017-10-29 15:13:49 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"20"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:13:53 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:13:53 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 14.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:13:54 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 36ms (Views: 34.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:13:54 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:13:54 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 25ms (Views: 24.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:13:56 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qOFP77GioRruZtYf/K0SLjfMkIfMYssM0VJJ9F8oVoyzfqRqyF4WJcmMo1x1zttt8PeOvTV31bwRvw4tbwRGKw==", "messages"=>{"text"=>"ddwq"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:13:56.194903"], ["updated_at", "2017-10-29 13:13:56.194903"], ["text", "ddwq"]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/21
+Completed 302 Found in 20ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/messages/21" for 127.0.0.1 at 2017-10-29 15:13:56 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"21"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:13:58 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qOFP77GioRruZtYf/K0SLjfMkIfMYssM0VJJ9F8oVoyzfqRqyF4WJcmMo1x1zttt8PeOvTV31bwRvw4tbwRGKw==", "messages"=>{"text"=>"ddwq"}, "commit"=>"Save Messages"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:13:58.745119"], ["updated_at", "2017-10-29 13:13:58.745119"], ["text", "ddwq"]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/22
+Completed 302 Found in 22ms (ActiveRecord: 16.4ms)
+
+
+Started GET "/messages/22" for 127.0.0.1 at 2017-10-29 15:13:58 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"22"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:23:47 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:23:49 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/kB/qb9fQgBNOJlO2vGmnBpyb/433Ymmbvjneni8jETl35QsxqP1P2rS7A1Tkm/f3UlxxM7IlxauFaCjSJCc4w==", "messages"=>{"text"=>""}, "commit"=>"Save Messages"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:23:49.019905"], ["updated_at", "2017-10-29 13:23:49.019905"], ["text", ""]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/23
+Completed 302 Found in 18ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/messages/23" for 127.0.0.1 at 2017-10-29 15:23:49 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"23"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-29 15:24:40 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/35" for 127.0.0.1 at 2017-10-29 15:24:42 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"35"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/33" for 127.0.0.1 at 2017-10-29 15:24:46 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"33"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/999" for 127.0.0.1 at 2017-10-29 15:24:49 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"999"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:27:24 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:27:26 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4rcjhgTmWiqZqCCGyFxAbw7al37qeEgo6DnwGqFPAUr5KMgDfRrtFb5CVcVBP4ksyeGJRBNtVpgo1LfDkWMR7Q==", "messages"=>{"text"=>"верг"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:27:26.117608"], ["updated_at", "2017-10-29 13:27:26.117608"], ["text", "верг"]]
+  [1m[35m (16.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/24
+Completed 302 Found in 19ms (ActiveRecord: 16.8ms)
+
+
+Started GET "/messages/24" for 127.0.0.1 at 2017-10-29 15:27:26 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"24"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:27:56 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4rcjhgTmWiqZqCCGyFxAbw7al37qeEgo6DnwGqFPAUr5KMgDfRrtFb5CVcVBP4ksyeGJRBNtVpgo1LfDkWMR7Q==", "messages"=>{"text"=>"верг"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:27:56.118392"], ["updated_at", "2017-10-29 13:27:56.118392"], ["text", "верг"]]
+  [1m[35m (16.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/25
+Completed 302 Found in 19ms (ActiveRecord: 16.3ms)
+
+
+Started GET "/messages/25" for 127.0.0.1 at 2017-10-29 15:27:56 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"25"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:27:58 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:28:09 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VgpKN9YtR9sFDNzgcbzHA5WJeKkU+sjcTyskzC9XR95NlaGyr9Hw5CLmqaP43w5AUrJmk+3v1myPxmMVH3tXeQ==", "messages"=>{"text"=>"ds"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:28:10.204913"], ["updated_at", "2017-10-29 13:28:10.204913"], ["text", "ds"]]
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/26
+Completed 302 Found in 32ms (ActiveRecord: 15.4ms)
+
+
+Started GET "/messages/26" for 127.0.0.1 at 2017-10-29 15:28:10 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"26"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:28:30 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 119ms (Views: 118.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:28:30 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/sow" for 127.0.0.1 at 2017-10-29 15:28:34 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"sow"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages/show" for 127.0.0.1 at 2017-10-29 15:28:36 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"show"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:42:18 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:42:25 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXDEeyQncL12SWqatHmngDEw1x0vnHvTTwu0CBsOLmpq7y/+XdvHglGjH9k9Gm7D9gvJJ9aJZWOP5vPRKyI+zQ==", "messages"=>{"text"=>"we"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:42:25.203398"], ["updated_at", "2017-10-29 13:42:25.203398"], ["text", "we"]]
+  [1m[35m (9.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/27
+Completed 302 Found in 12ms (ActiveRecord: 9.4ms)
+
+
+Started GET "/messages/27" for 127.0.0.1 at 2017-10-29 15:42:25 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"27"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:43:49 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXDEeyQncL12SWqatHmngDEw1x0vnHvTTwu0CBsOLmpq7y/+XdvHglGjH9k9Gm7D9gvJJ9aJZWOP5vPRKyI+zQ==", "messages"=>{"text"=>"we"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:43:49.753786"], ["updated_at", "2017-10-29 13:43:49.753786"], ["text", "we"]]
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/28
+Completed 302 Found in 14ms (ActiveRecord: 11.2ms)
+
+
+Started GET "/messages/28" for 127.0.0.1 at 2017-10-29 15:43:49 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"28"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:44:43 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXDEeyQncL12SWqatHmngDEw1x0vnHvTTwu0CBsOLmpq7y/+XdvHglGjH9k9Gm7D9gvJJ9aJZWOP5vPRKyI+zQ==", "messages"=>{"text"=>"wedsfv"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:44:43.662132"], ["updated_at", "2017-10-29 13:44:43.662132"], ["text", "wedsfv"]]
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/29
+Completed 302 Found in 25ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/messages/29" for 127.0.0.1 at 2017-10-29 15:44:43 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"29"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 29], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (13.9ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: <%= @message.text %>
+  
+app/views/messages/show.html.erb:1:in `_app_views_messages_show_html_erb__487734680870319074_70145486617900'
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:45:01 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXDEeyQncL12SWqatHmngDEw1x0vnHvTTwu0CBsOLmpq7y/+XdvHglGjH9k9Gm7D9gvJJ9aJZWOP5vPRKyI+zQ==", "messages"=>{"text"=>"wedsfv"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:45:01.047291"], ["updated_at", "2017-10-29 13:45:01.047291"], ["text", "wedsfv"]]
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/30
+Completed 302 Found in 29ms (ActiveRecord: 20.1ms)
+
+
+Started GET "/messages/30" for 127.0.0.1 at 2017-10-29 15:45:01 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"30"}
+  Rendering text template
+  Rendered text template (0.0ms)
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 30], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:45:25 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXDEeyQncL12SWqatHmngDEw1x0vnHvTTwu0CBsOLmpq7y/+XdvHglGjH9k9Gm7D9gvJJ9aJZWOP5vPRKyI+zQ==", "messages"=>{"text"=>"wedsfv"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:45:25.146794"], ["updated_at", "2017-10-29 13:45:25.146794"], ["text", "wedsfv"]]
+  [1m[35m (9.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/31
+Completed 302 Found in 12ms (ActiveRecord: 9.9ms)
+
+
+Started GET "/messages/31" for 127.0.0.1 at 2017-10-29 15:45:25 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"31"}
+  Rendering text template
+  Rendered text template (0.0ms)
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:45:30 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cXDEeyQncL12SWqatHmngDEw1x0vnHvTTwu0CBsOLmpq7y/+XdvHglGjH9k9Gm7D9gvJJ9aJZWOP5vPRKyI+zQ==", "messages"=>{"text"=>"wedsfvefdewrf"}, "commit"=>"Save Messages"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:45:30.570152"], ["updated_at", "2017-10-29 13:45:30.570152"], ["text", "wedsfvefdewrf"]]
+  [1m[35m (18.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/32
+Completed 302 Found in 24ms (ActiveRecord: 19.2ms)
+
+
+Started GET "/messages/32" for 127.0.0.1 at 2017-10-29 15:45:30 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"32"}
+  Rendering text template
+  Rendered text template (0.0ms)
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 32], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-10-29 15:45:33 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:46:13 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OOWazJ4bwcE7nzbbpg17NDlXq4FD2w++Ot1AxbNIu0AjenFJ5+d2/hx1Q5gvbrJ3/my1u7rOEQ76MAccg2Sr5w==", "messages"=>{"text"=>"вяерф"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:46:13.503265"], ["updated_at", "2017-10-29 13:46:13.503265"], ["text", "вяерф"]]
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/33
+Completed 302 Found in 26ms (ActiveRecord: 14.6ms)
+
+
+Started GET "/messages/33" for 127.0.0.1 at 2017-10-29 15:46:13 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 14.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/33" for 127.0.0.1 at 2017-10-29 15:47:35 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 9.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/messages/33" for 127.0.0.1 at 2017-10-29 15:47:36 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 26ms (Views: 22.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages/33" for 127.0.0.1 at 2017-10-29 15:47:36 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/33" for 127.0.0.1 at 2017-10-29 15:47:38 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"33"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 33], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:47:46 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OOWazJ4bwcE7nzbbpg17NDlXq4FD2w++Ot1AxbNIu0AjenFJ5+d2/hx1Q5gvbrJ3/my1u7rOEQ76MAccg2Sr5w==", "messages"=>{"text"=>"вяерфqwer"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:47:46.126095"], ["updated_at", "2017-10-29 13:47:46.126095"], ["text", "вяерфqwer"]]
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/34
+Completed 302 Found in 25ms (ActiveRecord: 17.7ms)
+
+
+Started GET "/messages/34" for 127.0.0.1 at 2017-10-29 15:47:46 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"34"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 10.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/99" for 127.0.0.1 at 2017-10-29 15:47:57 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"99"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 99], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=99):
+  
+app/controllers/messages_controller.rb:13:in `show'
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:48:11 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OOWazJ4bwcE7nzbbpg17NDlXq4FD2w++Ot1AxbNIu0AjenFJ5+d2/hx1Q5gvbrJ3/my1u7rOEQ76MAccg2Sr5w==", "messages"=>{"text"=>"вяерфqwer"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:48:11.479083"], ["updated_at", "2017-10-29 13:48:11.479083"], ["text", "вяерфqwer"]]
+  [1m[35m (12.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/35
+Completed 302 Found in 16ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/messages/35" for 127.0.0.1 at 2017-10-29 15:48:11 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"35"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 35], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:49:27 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OOWazJ4bwcE7nzbbpg17NDlXq4FD2w++Ot1AxbNIu0AjenFJ5+d2/hx1Q5gvbrJ3/my1u7rOEQ76MAccg2Sr5w==", "messages"=>{"text"=>"вяерфqwer"}, "commit"=>"Save Messages"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:49:27.735792"], ["updated_at", "2017-10-29 13:49:27.735792"], ["text", "вяерфqwer"]]
+  [1m[35m (14.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/36
+Completed 302 Found in 26ms (ActiveRecord: 18.1ms)
+
+
+Started GET "/messages/36" for 127.0.0.1 at 2017-10-29 15:49:27 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/36" for 127.0.0.1 at 2017-10-29 15:49:40 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"36"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 36], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 23ms (Views: 9.8ms | ActiveRecord: 4.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-10-29 15:49:45 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OOWazJ4bwcE7nzbbpg17NDlXq4FD2w++Ot1AxbNIu0AjenFJ5+d2/hx1Q5gvbrJ3/my1u7rOEQ76MAccg2Sr5w==", "messages"=>{"text"=>"вяерфqwereeee"}, "commit"=>"Save Messages"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-10-29 13:49:45.298504"], ["updated_at", "2017-10-29 13:49:45.298504"], ["text", "вяерфqwereeee"]]
+  [1m[35m (17.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/messages/37
+Completed 302 Found in 26ms (ActiveRecord: 18.6ms)
+
+
+Started GET "/messages/37" for 127.0.0.1 at 2017-10-29 15:49:45 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"37"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 37], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/31" for 127.0.0.1 at 2017-10-29 15:49:47 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 31], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-29 15:49:50 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-29 15:50:19 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-29 15:50:30 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-29 15:50:40 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-29 15:52:06 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-29 15:52:24 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/1" for 127.0.0.1 at 2017-10-29 15:52:33 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.1ms)
+
+
