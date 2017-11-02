@@ -8,12 +8,22 @@ class MessagesController < ApplicationController
 	end
 	
 	def show
-		@message = Message.find(params[:id])
-
-		respond_to do |format|
-      		format.html # stays the same
-  			format.json { render json: @message.to_json }
-        	format.xml { render :xml => @message.to_xml }
-    	end
+		id = params[:id]
+# if Truck.exists?(10)
+		if Message.exists?(id)
+			@message = Message.find(id)
+			respond_to do |format|
+	      		format.html # stays the same
+	  			format.json { render json: @message.to_json }
+	        	format.xml { render :xml => @message.to_xml }
+	    	end
+	    	@message.destroy
+	    else 
+	    	# message is already destroyed
+			@message = Message.new(:text => "The message was destroyed!!!!")
+			# object = Student.new(:name => "a", :age => 2)
+			@message.save
+		end
+		
 	end
 end

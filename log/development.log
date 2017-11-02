@@ -4744,3 +4744,694 @@ Processing by MessagesController#create as HTML
 Completed 200 OK in 38ms (Views: 14.4ms | ActiveRecord: 12.0ms)
 
 
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 16:11:52 +0200
+  [1m[35m (17.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (25.7ms)
+Completed 200 OK in 630ms (Views: 623.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 16:11:59 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G0OBpmpqv/EUr1ZJlfyqcK7rpT+N2OAYQiJdRNVwrOjhCu5ThRx7XLil4KXk/8KDJj1rF+xKYUrLT4CyovC3Qw==", "messages"=>{"text"=>"sdas"}, "commit"=>"Save message"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (33.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:11:59.272838"], ["updated_at", "2017-11-02 14:11:59.272838"], ["text", "sdas"]]
+  [1m[35m (14.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 160ms (Views: 36.3ms | ActiveRecord: 87.5ms)
+
+
+Started GET "/messages/90" for 127.0.0.1 at 2017-11-02 16:12:03 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"90"}
+  [1m[36mMessage Load (30.5ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 90]]
+  [1m[35m (35.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 279ms (Views: 38.6ms | ActiveRecord: 67.3ms)
+
+
+Started GET "/messages/90" for 127.0.0.1 at 2017-11-02 16:12:07 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"90"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 90], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=90):
+  
+app/controllers/messages_controller.rb:11:in `show'
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 16:16:10 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G0OBpmpqv/EUr1ZJlfyqcK7rpT+N2OAYQiJdRNVwrOjhCu5ThRx7XLil4KXk/8KDJj1rF+xKYUrLT4CyovC3Qw==", "messages"=>{"text"=>"sdasdfv"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:16:10.593229"], ["updated_at", "2017-11-02 14:16:10.593229"], ["text", "sdasdfv"]]
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 11.4ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/messages/91" for 127.0.0.1 at 2017-11-02 16:16:13 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"91"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 91]]
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/messages_controller.rb:23:in `show'
+Started GET "/messages/91" for 127.0.0.1 at 2017-11-02 16:16:33 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"91"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 91]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__2975613697917196135_70172731072900'
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 16:16:39 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G0OBpmpqv/EUr1ZJlfyqcK7rpT+N2OAYQiJdRNVwrOjhCu5ThRx7XLil4KXk/8KDJj1rF+xKYUrLT4CyovC3Qw==", "messages"=>{"text"=>"sdasdfvd"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:16:39.313339"], ["updated_at", "2017-11-02 14:16:39.313339"], ["text", "sdasdfvd"]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 28ms (Views: 13.1ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/messages/92" for 127.0.0.1 at 2017-11-02 16:16:41 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"92"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT "messages".* FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 92]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__2975613697917196135_70172735558420'
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 16:16:57 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 16:17:00 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ue6ln+FrKDTsR72IBmmOXIC7lrHCiv3TXoQzcsS2PbpDp8pqDh3smUBNC2R3auavCG1YmaMYfIHX6e6EszYmEQ==", "messages"=>{"text"=>"ds"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:17:00.601290"], ["updated_at", "2017-11-02 14:17:00.601290"], ["text", "ds"]]
+  [1m[35m (16.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 13.4ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/messages/93" for 127.0.0.1 at 2017-11-02 16:17:02 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"93"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 93]]
+  [1m[35m (72.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 105ms (Views: 28.4ms | ActiveRecord: 73.0ms)
+
+
+Started GET "/messages/93" for 127.0.0.1 at 2017-11-02 16:17:06 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"93"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 93], ["LIMIT", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=93):
+  
+app/controllers/messages_controller.rb:11:in `show'
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 16:18:19 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ue6ln+FrKDTsR72IBmmOXIC7lrHCiv3TXoQzcsS2PbpDp8pqDh3smUBNC2R3auavCG1YmaMYfIHX6e6EszYmEQ==", "messages"=>{"text"=>"dserw"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:18:19.559050"], ["updated_at", "2017-11-02 14:18:19.559050"], ["text", "dserw"]]
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 46ms (Views: 11.1ms | ActiveRecord: 20.5ms)
+
+
+Started GET "/messages/94" for 127.0.0.1 at 2017-11-02 16:18:21 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 94]]
+  [1m[35m (103.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 137ms (Views: 28.0ms | ActiveRecord: 104.5ms)
+
+
+Started GET "/messages/94" for 127.0.0.1 at 2017-11-02 16:18:22 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=94):
+  
+app/controllers/messages_controller.rb:13:in `show'
+Started GET "/messages/94" for 127.0.0.1 at 2017-11-02 16:19:13 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  
+app/controllers/messages_controller.rb:23:in `show'
+Started GET "/messages/94" for 127.0.0.1 at 2017-11-02 16:19:24 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__2975613697917196135_70172729775860'
+Started GET "/messages/94" for 127.0.0.1 at 2017-11-02 16:19:55 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 3.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for "Mssg destroyed":String
+Did you mean?  ext):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__2975613697917196135_70172654053140'
+Started GET "/messages/94" for 127.0.0.1 at 2017-11-02 16:20:54 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"94"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 94], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__2975613697917196135_70172652993180'
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 16:21:00 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ue6ln+FrKDTsR72IBmmOXIC7lrHCiv3TXoQzcsS2PbpDp8pqDh3smUBNC2R3auavCG1YmaMYfIHX6e6EszYmEQ==", "messages"=>{"text"=>"dserwer"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:21:00.342437"], ["updated_at", "2017-11-02 14:21:00.342437"], ["text", "dserwer"]]
+  [1m[35m (18.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 38ms (Views: 12.4ms | ActiveRecord: 19.1ms)
+
+
+Started GET "/messages/95" for 127.0.0.1 at 2017-11-02 16:21:02 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages/95" for 127.0.0.1 at 2017-11-02 16:21:03 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 14ms (Views: 11.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/messages/95" for 127.0.0.1 at 2017-11-02 16:21:04 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/messages/95" for 127.0.0.1 at 2017-11-02 16:21:05 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 16ms (Views: 12.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/messages/95" for 127.0.0.1 at 2017-11-02 16:21:05 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"95"}
+  [1m[36mMessage Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 95], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 12.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 16:22:33 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 16:22:36 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ue6ln+FrKDTsR72IBmmOXIC7lrHCiv3TXoQzcsS2PbpDp8pqDh3smUBNC2R3auavCG1YmaMYfIHX6e6EszYmEQ==", "messages"=>{"text"=>"dserwerwdfs"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:22:36.189690"], ["updated_at", "2017-11-02 14:22:36.189690"], ["text", "dserwerwdfs"]]
+  [1m[35m (47.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 89ms (Views: 24.8ms | ActiveRecord: 50.2ms)
+
+
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:22:38 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 96]]
+  [1m[35m (51.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 88ms (Views: 30.1ms | ActiveRecord: 51.7ms)
+
+
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:22:40 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__2975613697917196135_70172739253340'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:23:09 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `text=' for nil:NilClass):
+  
+app/controllers/messages_controller.rb:22:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:23:09 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `text=' for nil:NilClass):
+  
+app/controllers/messages_controller.rb:22:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:24:23 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for "DEl":String
+Did you mean?  ext):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__2975613697917196135_70172738391640'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:24:24 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for "DEl":String
+Did you mean?  ext):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__2975613697917196135_70172620678400'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:26:13 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.9ms)
+
+
+  
+NoMethodError (undefined method `[]=' for nil:NilClass):
+  
+app/controllers/messages_controller.rb:22:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:26:14 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+NoMethodError (undefined method `[]=' for nil:NilClass):
+  
+app/controllers/messages_controller.rb:22:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:27:03 +0200
+  
+SyntaxError (/home/kari/ELSYS/GitHub/TP-Privnote/app/controllers/messages_controller.rb:22: syntax error, unexpected '=', expecting keyword_end
+		Message.find(id)= "err"
+		                 ^):
+  
+app/controllers/messages_controller.rb:22: syntax error, unexpected '=', expecting keyword_end
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:27:04 +0200
+  
+SyntaxError (/home/kari/ELSYS/GitHub/TP-Privnote/app/controllers/messages_controller.rb:22: syntax error, unexpected '=', expecting keyword_end
+		Message.find(id)= "err"
+		                 ^):
+  
+app/controllers/messages_controller.rb:22: syntax error, unexpected '=', expecting keyword_end
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:29:46 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.7ms)
+
+
+  
+NoMethodError (undefined method `[]=' for #<Class:0x007fa4b4c60330>):
+  
+app/controllers/messages_controller.rb:22:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:30:02 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.5ms)
+
+
+  
+NoMethodError (undefined method `message' for #<Class:0x007fa4ba63aab8>):
+  
+app/controllers/messages_controller.rb:22:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:30:12 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.1ms)
+
+
+  
+NoMethodError (undefined method `messages' for #<Class:0x007fa4b054b670>):
+  
+app/controllers/messages_controller.rb:22:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:30:13 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `messages' for #<Class:0x007fa4b054b670>):
+  
+app/controllers/messages_controller.rb:22:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:30:39 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.3ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__2975613697917196135_70172737257120'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:31:22 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `permit' for "Err":String
+Did you mean?  print):
+  
+app/controllers/messages_controller.rb:23:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:31:34 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 4.3ms)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  
+app/controllers/messages_controller.rb:23:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:33:32 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'messages' for Message.):
+  
+app/controllers/messages_controller.rb:23:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:33:32 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'messages' for Message.):
+  
+app/controllers/messages_controller.rb:23:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:33:33 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'messages' for Message.):
+  
+app/controllers/messages_controller.rb:23:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:33:33 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'messages' for Message.):
+  
+app/controllers/messages_controller.rb:23:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:33:34 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'messages' for Message.):
+  
+app/controllers/messages_controller.rb:23:in `show'
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:34:16 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:34:16.089476"], ["updated_at", "2017-11-02 14:34:16.089476"], ["text", "Err"]]
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 33ms (Views: 9.8ms | ActiveRecord: 14.6ms)
+
+
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:34:18 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:34:18.296034"], ["updated_at", "2017-11-02 14:34:18.296034"], ["text", "Err"]]
+  [1m[35m (47.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 77ms (Views: 25.3ms | ActiveRecord: 48.1ms)
+
+
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:34:18 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:34:18.997528"], ["updated_at", "2017-11-02 14:34:18.997528"], ["text", "Err"]]
+  [1m[35m (37.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 53ms (Views: 10.4ms | ActiveRecord: 38.3ms)
+
+
+Started GET "/messages/96" for 127.0.0.1 at 2017-11-02 16:34:37 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"96"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 96], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:34:37.236653"], ["updated_at", "2017-11-02 14:34:37.236653"], ["text", "The message was destroyed!!!!"]]
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 36ms (Views: 9.2ms | ActiveRecord: 17.7ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 16:34:41 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ue6ln+FrKDTsR72IBmmOXIC7lrHCiv3TXoQzcsS2PbpDp8pqDh3smUBNC2R3auavCG1YmaMYfIHX6e6EszYmEQ==", "messages"=>{"text"=>"dserwerwdfsefr"}, "commit"=>"Save message"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:34:41.501390"], ["updated_at", "2017-11-02 14:34:41.501390"], ["text", "dserwerwdfsefr"]]
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 14.7ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/messages/101" for 127.0.0.1 at 2017-11-02 16:34:44 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 101]]
+  [1m[35m (21.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 46ms (Views: 18.6ms | ActiveRecord: 22.5ms)
+
+
+Started GET "/messages/101" for 127.0.0.1 at 2017-11-02 16:34:46 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"101"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 101], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 14:34:46.345131"], ["updated_at", "2017-11-02 14:34:46.345131"], ["text", "The message was destroyed!!!!"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 22ms (Views: 11.9ms | ActiveRecord: 7.1ms)
+
+
