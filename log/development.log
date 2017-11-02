@@ -5435,3 +5435,80 @@ Processing by MessagesController#show as HTML
 Completed 200 OK in 22ms (Views: 11.9ms | ActiveRecord: 7.1ms)
 
 
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 18:56:15 +0200
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 164ms (Views: 156.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 18:56:19 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSAnPCX4U1TPLpbUT2lr5JYZN9+qUVtZsKwfYPgtUcK7aUjJyo6X+WMkIDg+agMXHs/598vD2gs5wcKWj61KaQ==", "messages"=>{"text"=>"qde"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 16:56:19.213768"], ["updated_at", "2017-11-02 16:56:19.213768"], ["text", "qde"]]
+  [1m[35m (11.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 45ms (Views: 14.5ms | ActiveRecord: 18.2ms)
+
+
+Started GET "/messages/103" for 127.0.0.1 at 2017-11-02 18:56:20 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 103]]
+  [1m[35m (10.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 36.5ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/messages/103" for 127.0.0.1 at 2017-11-02 18:56:22 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering messages/error.html.erb within layouts/application
+  Rendered messages/error.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/103" for 127.0.0.1 at 2017-11-02 18:57:13 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering messages/error.html.erb within layouts/application
+  Rendered messages/error.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/103" for 127.0.0.1 at 2017-11-02 18:57:25 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMessage Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering messages/error.html.erb within layouts/application
+  Rendered messages/error.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 23ms (Views: 19.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/messages/103" for 127.0.0.1 at 2017-11-02 18:58:21 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering messages/error.html.erb within layouts/application
+  Rendered messages/error.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 17ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/103" for 127.0.0.1 at 2017-11-02 18:59:09 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering messages/error.html.erb within layouts/application
+  Rendered messages/error.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 20ms (Views: 12.7ms | ActiveRecord: 2.6ms)
+
+

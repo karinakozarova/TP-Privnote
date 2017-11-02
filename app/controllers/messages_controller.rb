@@ -9,7 +9,6 @@ class MessagesController < ApplicationController
 	
 	def show
 		id = params[:id]
-# if Truck.exists?(10)
 		if Message.exists?(id)
 			@message = Message.find(id)
 			respond_to do |format|
@@ -20,9 +19,9 @@ class MessagesController < ApplicationController
 	    	@message.destroy
 	    else 
 	    	# message is already destroyed
-			@message = Message.new(:text => "The message was destroyed!!!!")
-			# object = Student.new(:name => "a", :age => 2)
-			@message.save
+			# @message = Message.new(:text => "The message was destroyed! You can't view it.")
+			# @message.save
+			render :error
 		end
 		
 	end
