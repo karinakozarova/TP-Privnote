@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
 			respond_to do |format|
 	      		format.html # stays the same
 	  			format.json { render json: @message.to_json }
-	        	format.xml { render :xml => @message.to_xml }
+	        	format.xml  {  render :xml => @message.to_xml }
 	    	end
 	    	@message.destroy
 	    else 

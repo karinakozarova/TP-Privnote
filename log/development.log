@@ -5512,3 +5512,219 @@ Processing by MessagesController#show as HTML
 Completed 200 OK in 20ms (Views: 12.7ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/messages/103" for 127.0.0.1 at 2017-11-02 19:11:10 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering messages/error.html.erb within layouts/application
+  Rendered messages/error.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 15ms (Views: 10.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages/103" for 127.0.0.1 at 2017-11-02 19:11:12 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"103"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 103], ["LIMIT", 1]]
+  Rendering messages/error.html.erb within layouts/application
+  Rendered messages/error.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:11:13 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:11:18 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i79yZx+UGGAltt5qOhgjIqGHSx3Q3QkZDXrRhKnlLatgE2ZsjS5hjZFXMgp4adZ/Lx4FCqWnCaCAvOB3LoEo7A==", "messages"=>{"text"=>"ерввре"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:11:18.964060"], ["updated_at", "2017-11-02 17:11:18.964060"], ["text", "ерввре"]]
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 30ms (Views: 13.0ms | ActiveRecord: 12.2ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:14:04 +0200
+  
+SyntaxError (/home/kari/ELSYS/GitHub/TP-Privnote/app/controllers/messages_controller.rb:8: syntax error, unexpected ':', expecting keyword_end
+		notice: "You can view your note at h...
+		       ^):
+  
+app/controllers/messages_controller.rb:8: syntax error, unexpected ':', expecting keyword_end
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:19:11 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"QSAnPCX4U1TPLpbUT2lr5JYZN9+qUVtZsKwfYPgtUcK7aUjJyo6X+WMkIDg+agMXHs/598vD2gs5wcKWj61KaQ==", "messages"=>{"text"=>"qdee"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:19:11.278300"], ["updated_at", "2017-11-02 17:19:11.278300"], ["text", "qdee"]]
+  [1m[35m (11.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 11.9ms | ActiveRecord: 13.7ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:19:58 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:20:02 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"77dRSZjoJz1Nn5W2/EaHD0iAHB4HrR37mWUOaRHzucMV/j68d57jkOGVI1qNRe/8wFbSNmY/nKkQCNOfZnOiaA==", "messages"=>{"text"=>"ee"}, "commit"=>"Save message"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:20:02.259185"], ["updated_at", "2017-11-02 17:20:02.259185"], ["text", "ee"]]
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 33ms (Views: 12.9ms | ActiveRecord: 15.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:20:29 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:20:32 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hpDYBwlIfQBBzWFs7HxWIOWLdhKRrs1rA82YCutZAw182bfy5j65re3H14Cdfz7TbV24OvA8TDmKoEX8nNkYpg==", "messages"=>{"text"=>"sd"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:20:32.431152"], ["updated_at", "2017-11-02 17:20:32.431152"], ["text", "sd"]]
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 23ms (Views: 10.3ms | ActiveRecord: 10.6ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:21:40 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:21:42 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MnA80sc7qUBRv5CXhJQgJ0pEXfy/1kMgnwyKvye9oSDIOVMnKE1t7f21Jnv1l0jUwpKT1N5EwnIWYVdJUD26iw==", "messages"=>{"text"=>"ewer"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:21:42.931011"], ["updated_at", "2017-11-02 17:21:42.931011"], ["text", "ewer"]]
+  [1m[35m (20.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 35ms (Views: 11.1ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:22:32 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:22:35 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Y5m8tz0YZw7k2kwVRplAt8RBlX2UvI4tOTpxd2lRgUqZ0NNC0m6jo0jQ+vk3mihETJdbVfUuD3+wV6yBHtGa4Q==", "messages"=>{"text"=>"3qet4w"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:22:35.062078"], ["updated_at", "2017-11-02 17:22:35.062078"], ["text", "3qet4w"]]
+  [1m[35m (32.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 49ms (Views: 14.3ms | ActiveRecord: 32.5ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:22:44 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:22:46 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UOHfeJBGBpp0UY3wNnVl4QkyI4RW5cIikshkgI+1YT6qqLCNfzDCN9hbOxxHdg0SgeTtrDd3Q3Abpbl2+DV6lQ==", "messages"=>{"text"=>""}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:22:46.330242"], ["updated_at", "2017-11-02 17:22:46.330242"], ["text", ""]]
+  [1m[35m (13.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 30ms (Views: 12.9ms | ActiveRecord: 14.4ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:23:09 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:23:12 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rWQxCq/lKjMznuIslNu/Wh8J9FHUqJ8xyfykJR4nfzNXLV7/QJPunp+UVMDl2Nepl986ebU6HmNAkXnTaadkmA==", "messages"=>{"text"=>"ee"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:23:12.820627"], ["updated_at", "2017-11-02 17:23:12.820627"], ["text", "ee"]]
+  [1m[35m (15.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 12.3ms | ActiveRecord: 16.2ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:23:28 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:23:31 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DipUeIJXjes9xE8mcHF7CZFV0TbeACMFhVzQkRnS9Cr0YzuNbSFJRpHO+coBchP6GYMfHr+SolcMMQ1nblLvgQ==", "messages"=>{"text"=>""}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:23:31.157172"], ["updated_at", "2017-11-02 17:23:31.157172"], ["text", ""]]
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 28ms (Views: 12.4ms | ActiveRecord: 13.3ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:24:01 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:24:04 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"d5avmqTYgHZyu2FEZHWYxMMaLqLAu3MOCYcxkEEw8UGN38BvS65E296x16gVdvA3S8zgiqEp8lyA6uxmNrDq6g==", "messages"=>{"text"=>""}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:24:04.551185"], ["updated_at", "2017-11-02 17:24:04.551185"], ["text", ""]]
+  [1m[35m (68.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 103ms (Views: 29.4ms | ActiveRecord: 69.2ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-02 19:24:28 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-02 19:24:30 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kbdrqTtkgnQSIx6pPVLLjrU01/HNaDr0aumETUcz+E9r/gRc1BJG2b4pqEVMUaN9PeIZ2az6u6bjhFm7MLPj5A==", "messages"=>{"text"=>"4re"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at", "text") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2017-11-02 17:24:30.694144"], ["updated_at", "2017-11-02 17:24:30.694144"], ["text", "4re"]]
+  [1m[35m (19.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 12.3ms | ActiveRecord: 19.2ms)
+
+
