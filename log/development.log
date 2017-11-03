@@ -7585,3 +7585,31 @@ Processing by MessagesController#return_mssg_as_json as HTML
 Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
 
 
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:30:15 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeqефервр"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "eeqефервр"], ["created_at", "2017-11-03 13:30:15.593243"], ["updated_at", "2017-11-03 13:30:15.593243"]]
+  [1m[35m (9.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/17"], ["updated_at", "2017-11-03 13:30:15.605444"], ["id", 17]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 172ms (Views: 125.6ms | ActiveRecord: 17.2ms)
+
+
+Started GET "/messages/17" for 127.0.0.1 at 2017-11-03 15:30:18 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.5ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 17]]
+  [1m[35m (21.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 74ms (Views: 17.3ms | ActiveRecord: 23.0ms)
+
+
