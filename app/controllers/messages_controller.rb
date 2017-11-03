@@ -25,7 +25,7 @@ class MessagesController < ApplicationController
 	    	# message is already destroyed
 			# @message = Message.new(:text => "The message was destroyed! You can't view it.")
 			# @message.save
-			:error
+			render :error
 		end
 		
 	end
@@ -41,6 +41,7 @@ class MessagesController < ApplicationController
 	end
 
 	def return_mssg_as_json
+		# in browser
 		if Message.exists?(params[:id])
 			if @message = Message.find_by(id: params[:id])
 			  render json: { message: @message[:text] }
@@ -49,11 +50,8 @@ class MessagesController < ApplicationController
 			end
 			@message.destroy
 		else 
-			render json: { message: "Error!Message was destroyed!" }
+			render json: { error: "Error!Message was destroyed!" }
 		end
 	end
 
-	def api
-		return_mssg_as_json
-	end
 end
