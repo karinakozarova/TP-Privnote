@@ -41,11 +41,16 @@ class MessagesController < ApplicationController
 	end
 
 	def return_mssg_as_json
-	  if @message = Message.find_by(id: params[:id])
-	    render json: { message: @message[:text] }
-	  else
-	    render json: {errors: :not_found}, status: :not_found
-	  end
+		if Message.exists?(params[:id])
+			if @message = Message.find_by(id: params[:id])
+			  render json: { message: @message[:text] }
+			else
+			  render json: {errors: :not_found}, status: :not_found
+			end
+			@message.destroy
+		else 
+			render json: { message: "Error!Message was destroyed!" }
+		end
 	end
 
 	def api
