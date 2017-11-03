@@ -37,13 +37,13 @@ class MessagesController < ApplicationController
 		string = "http://privnote.herokuapp.com/messages/" 
 		@message.url = string + @message.id.to_s
 		@message.save
-		render json: @message
+		render json: { url: @message[:url] }
 	end
 
 	def return_mssg_as_json
 			id = params[:id].to_i
 			@message = Message.find(id)
-			render json: @message
+		render json: { message: @message[:text] }
 	end
 
 	def api
