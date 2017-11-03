@@ -13,18 +13,27 @@ class MessagesController < ApplicationController
 			@message = Message.find(id)
 			respond_to do |format|
 	      		format.html # stays the same
-	  			format.json {
-	  			 render json: @message.to_json 
-	  			}
-	        	format.xml  {  render :xml => @message.to_xml }
+	  			format.json { render json: @message.to_json }
+	        	format.xml  { render :xml => @message.to_xml }
 	    	end
 	    	@message.destroy
 	    else 
 	    	# message is already destroyed
 			# @message = Message.new(:text => "The message was destroyed! You can't view it.")
 			# @message.save
-			render :error
+			:error
 		end
 		
+	end
+
+
+	def return_mssg_as_json
+			id = params[:id].to_i
+			@message = Message.find(id)
+			render json: @message
+	end
+
+	def api
+		return_mssg_as_json
 	end
 end
