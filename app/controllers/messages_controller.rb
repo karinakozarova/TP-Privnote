@@ -1,11 +1,11 @@
 class MessagesController < ApplicationController
+	 protect_from_forgery except: :mssg_as_json
 	def new
 	end
 
 	def create
 		@message = Message.new(params.require(:messages).permit(:text))
-		 		@message.save
-
+		@message.save
 		string = "http://privnote.herokuapp.com/messages/" 
 		@message.url = string + @message.id.to_s
 		@message.save
@@ -30,6 +30,15 @@ class MessagesController < ApplicationController
 		
 	end
 
+	def mssg_as_json
+		@message = Message.new
+		@message.text = params.require(:messages)
+		@message.save
+		string = "http://privnote.herokuapp.com/messages/" 
+		@message.url = string + @message.id.to_s
+		@message.save
+		render json: @message
+	end
 
 	def return_mssg_as_json
 			id = params[:id].to_i
