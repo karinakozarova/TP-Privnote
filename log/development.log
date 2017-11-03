@@ -7003,3 +7003,585 @@ Processing by MessagesController#return_mssg_as_json as HTML
 Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/messages/api?id=3" for 127.0.0.1 at 2017-11-03 14:54:08 +0200
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 23ms (Views: 0.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/messages/api?id=3" for 127.0.0.1 at 2017-11-03 14:54:10 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMessage Load (0.4ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 12ms (Views: 0.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/messages/api?id=3" for 127.0.0.1 at 2017-11-03 15:03:19 +0200
+Started GET "/messages" for 127.0.0.1 at 2017-11-03 15:03:29 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMessage Load (1.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 1.3ms)
+
+
+Processing by MessagesController#new as HTML
+Started GET "/messages/api?id=3" for 127.0.0.1 at 2017-11-03 15:03:29 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"3"}
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 160ms (Views: 157.8ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 167ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:03:33 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P9MXv4bZfU2zMmf742EONj2mSZ3F3lVjEzy+Ox7uSZBwjOAhM8Oe/jiSJw2Ht7HtGUG3cmD9+NJEMSG8o1CWow==", "messages"=>{"text"=>"ads"}, "commit"=>"Save message"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/messages_controller.rb:8:in `+'
+app/controllers/messages_controller.rb:8:in `create'
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:03:51 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"P9MXv4bZfU2zMmf742EONj2mSZ3F3lVjEzy+Ox7uSZBwjOAhM8Oe/jiSJw2Ht7HtGUG3cmD9+NJEMSG8o1CWow==", "messages"=>{"text"=>"ads"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("text", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["text", "ads"], ["url", "http://privnote.herokuapp.com/"], ["created_at", "2017-11-03 13:03:51.622801"], ["updated_at", "2017-11-03 13:03:51.622801"]]
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 41ms (Views: 13.7ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/messages/api?id=4" for 127.0.0.1 at 2017-11-03 15:04:00 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages/4" for 127.0.0.1 at 2017-11-03 15:05:08 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 4]]
+  [1m[35m (18.9ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 45ms (Views: 18.8ms | ActiveRecord: 19.5ms)
+
+
+Started GET "/messages/4" for 127.0.0.1 at 2017-11-03 15:05:11 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMessage Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__3983147781928024803_70199193979040'
+Started GET "/messages/4" for 127.0.0.1 at 2017-11-03 15:05:45 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 2.2ms)
+
+
+  
+ActionView::Template::Error (undefined method `text' for nil:NilClass):
+    1: <p style = "text-align: center;font-size: 400%">
+    2: 	<b> Your message is: </b> <br>
+    3: 	<%= @message.text %> <br><br>
+    4: 		 <!-- <b> Your URL is: </b> <br> 
+    5: 		<%="#{request.protocol}#{request.host_with_port}#{request.fullpath}" %> -->
+    6: </p>
+  
+app/views/messages/show.html.erb:3:in `_app_views_messages_show_html_erb__3983147781928024803_70199105092400'
+Started GET "/messages" for 127.0.0.1 at 2017-11-03 15:05:52 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:05:55 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdlvltVMZKvKGRfW0lGQC7ivgkQEyzGO0CgRzIAbzNUqhpgIYFaHGEG5VyC2hy/QnEh8q6HonD+HJY5LPaUT5g==", "messages"=>{"text"=>"ewrr"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("text", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["text", "ewrr"], ["url", ""], ["created_at", "2017-11-03 13:05:55.306002"], ["updated_at", "2017-11-03 13:05:55.306002"]]
+  [1m[35m (14.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 40ms (Views: 16.7ms | ActiveRecord: 15.9ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:06:05 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=4" for 127.0.0.1 at 2017-11-03 15:07:13 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 4ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=4):
+  
+app/controllers/messages_controller.rb:34:in `return_mssg_as_json'
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:07:20 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 6ms (Views: 0.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:07:21 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:07:23 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages/api?id=4" for 127.0.0.1 at 2017-11-03 15:09:08 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 6ms (ActiveRecord: 2.4ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=4):
+  
+app/controllers/messages_controller.rb:34:in `return_mssg_as_json'
+Started GET "/messages/api?id=4" for 127.0.0.1 at 2017-11-03 15:09:11 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=4):
+  
+app/controllers/messages_controller.rb:34:in `return_mssg_as_json'
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:09:57 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 5ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:09:59 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:11:07 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:11:08 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:11:08 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:11:43 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:11:44 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:11:49 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 0.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:11:49 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:11:50 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:12:03 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 7ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:12:04 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:12:10 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 10ms (Views: 0.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:12:11 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:12:11 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:12:11 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:12:11 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/messages/api?id=5" for 127.0.0.1 at 2017-11-03 15:12:11 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:12:17 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdlvltVMZKvKGRfW0lGQC7ivgkQEyzGO0CgRzIAbzNUqhpgIYFaHGEG5VyC2hy/QnEh8q6HonD+HJY5LPaUT5g==", "messages"=>{"text"=>"ewrrwds"}, "commit"=>"Save message"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/messages_controller.rb:8:in `+'
+app/controllers/messages_controller.rb:8:in `create'
+Started GET "/messages/api?id=3" for 127.0.0.1 at 2017-11-03 15:13:32 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Completed 200 OK in 9ms (Views: 0.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/messages/api?id=4" for 127.0.0.1 at 2017-11-03 15:13:37 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.3ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Message with 'id'=4):
+  
+app/controllers/messages_controller.rb:34:in `return_mssg_as_json'
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:13:41 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdlvltVMZKvKGRfW0lGQC7ivgkQEyzGO0CgRzIAbzNUqhpgIYFaHGEG5VyC2hy/QnEh8q6HonD+HJY5LPaUT5g==", "messages"=>{"text"=>"ewrrwds"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("text", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["text", "ewrrwds"], ["url", "http://privnote.herokuapp.com/messages/"], ["created_at", "2017-11-03 13:13:41.811749"], ["updated_at", "2017-11-03 13:13:41.811749"]]
+  [1m[35m (16.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 11.6ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/messages/api?id=6" for 127.0.0.1 at 2017-11-03 15:13:49 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages/api?id=6" for 127.0.0.1 at 2017-11-03 15:14:09 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 11ms (Views: 0.5ms | ActiveRecord: 2.9ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:14:13 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZdlvltVMZKvKGRfW0lGQC7ivgkQEyzGO0CgRzIAbzNUqhpgIYFaHGEG5VyC2hy/QnEh8q6HonD+HJY5LPaUT5g==", "messages"=>{"text"=>"ewrrwds"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("text", "url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["text", "ewrrwds"], ["url", "http://privnote.herokuapp.com/messages/{@message.id}"], ["created_at", "2017-11-03 13:14:13.303079"], ["updated_at", "2017-11-03 13:14:13.303079"]]
+  [1m[35m (17.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 32ms (Views: 10.6ms | ActiveRecord: 18.0ms)
+
+
+Started GET "/messages/api?id=7" for 127.0.0.1 at 2017-11-03 15:14:19 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/messages" for 127.0.0.1 at 2017-11-03 15:16:29 +0200
+Processing by MessagesController#new as HTML
+  Rendering messages/new.html.erb within layouts/application
+  Rendered messages/new.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:16:32 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeq"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["url", "http://privnote.herokuapp.com/messages/{@message.id}"], ["created_at", "2017-11-03 13:16:32.715696"], ["updated_at", "2017-11-03 13:16:32.715696"]]
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 35ms (Views: 13.9ms | ActiveRecord: 12.5ms)
+
+
+Started GET "/messages/api?id=8" for 127.0.0.1 at 2017-11-03 15:16:38 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mMessage Load (0.3ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+Completed 200 OK in 3ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:17:30 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeq"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["url", "http://privnote.herokuapp.com/messages/"], ["created_at", "2017-11-03 13:17:30.692989"], ["updated_at", "2017-11-03 13:17:30.692989"]]
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 41ms (Views: 12.2ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/messages/api?id=9" for 127.0.0.1 at 2017-11-03 15:17:36 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:18:08 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeq"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["url", "http://privnote.herokuapp.com/messages/{message.id}"], ["created_at", "2017-11-03 13:18:08.052294"], ["updated_at", "2017-11-03 13:18:08.052294"]]
+  [1m[35m (17.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 39ms (Views: 11.8ms | ActiveRecord: 19.6ms)
+
+
+Started GET "/messages/api?id=10" for 127.0.0.1 at 2017-11-03 15:18:12 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:18:33 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeq"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("url", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["url", "http://privnote.herokuapp.com/messages/{@message.id}"], ["created_at", "2017-11-03 13:18:33.895492"], ["updated_at", "2017-11-03 13:18:33.895492"]]
+  [1m[35m (15.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 39ms (Views: 10.7ms | ActiveRecord: 18.9ms)
+
+
+Started GET "/messages/api?id=11" for 127.0.0.1 at 2017-11-03 15:18:40 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:22:55 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeq"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-11-03 13:22:55.457532"], ["updated_at", "2017-11-03 13:22:55.457532"]]
+  [1m[35m (36.2ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 38.7ms)
+
+
+  
+TypeError (no implicit conversion of Fixnum into String):
+  
+app/controllers/messages_controller.rb:12:in `+'
+app/controllers/messages_controller.rb:12:in `create'
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:23:08 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeq"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-11-03 13:23:08.932249"], ["updated_at", "2017-11-03 13:23:08.932249"]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/13"], ["updated_at", "2017-11-03 13:23:08.946147"], ["id", 13]]
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 12.1ms | ActiveRecord: 17.7ms)
+
+
+Started GET "/messages/api?id=13" for 127.0.0.1 at 2017-11-03 15:23:15 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:24:06 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeqефервр"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-11-03 13:24:06.217458"], ["updated_at", "2017-11-03 13:24:06.217458"]]
+  [1m[35m (17.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/14"], ["updated_at", "2017-11-03 13:24:06.237147"], ["id", 14]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 13.6ms | ActiveRecord: 25.0ms)
+
+
+Started GET "/messages/14" for 127.0.0.1 at 2017-11-03 15:24:10 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mMessage Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.2ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 14]]
+  [1m[35m (70.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 105ms (Views: 28.5ms | ActiveRecord: 71.1ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:24:54 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeqефервр"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "eeqефервр"], ["created_at", "2017-11-03 13:24:54.706885"], ["updated_at", "2017-11-03 13:24:54.706885"]]
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/15"], ["updated_at", "2017-11-03 13:24:54.720583"], ["id", 15]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 46ms (Views: 15.6ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/messages/15" for 127.0.0.1 at 2017-11-03 15:24:57 +0200
+Processing by MessagesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mMessage Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mMessage Load (0.6ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[31mDELETE FROM "messages" WHERE "messages"."id" = $1[0m  [["id", 15]]
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/show.html.erb within layouts/application
+  Rendered messages/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 40ms (Views: 21.0ms | ActiveRecord: 12.9ms)
+
+
+Started POST "/messages" for 127.0.0.1 at 2017-11-03 15:25:02 +0200
+Processing by MessagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DvYYlvJTTXk0zEUgeWnGZsQjnjuEwwQSgUJ6WMcfwzhBqe8IR0muyr9sBdYdv3m94MRg1CHgqaPWT+XfeqEcCw==", "messages"=>{"text"=>"eeqефервр"}, "commit"=>"Save message"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "eeqефервр"], ["created_at", "2017-11-03 13:25:02.888512"], ["updated_at", "2017-11-03 13:25:02.888512"]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/16"], ["updated_at", "2017-11-03 13:25:02.904051"], ["id", 16]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering messages/create.html.erb within layouts/application
+  Rendered messages/create.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 47ms (Views: 21.3ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/messages/api?id=16" for 127.0.0.1 at 2017-11-03 15:25:07 +0200
+Processing by MessagesController#return_mssg_as_json as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mMessage Load (0.1ms)[0m  [1m[34mSELECT  "messages".* FROM "messages" WHERE "messages"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms)
+
+

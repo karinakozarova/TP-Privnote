@@ -4,6 +4,10 @@ class MessagesController < ApplicationController
 
 	def create
 		@message = Message.new(params.require(:messages).permit(:text))
+		 		@message.save
+
+		string = "http://privnote.herokuapp.com/messages/" 
+		@message.url = string + @message.id.to_s
 		@message.save
 	end
 	
