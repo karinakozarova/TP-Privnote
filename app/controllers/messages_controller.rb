@@ -1,5 +1,5 @@
 class MessagesController < ApplicationController
-	 protect_from_forgery except: :mssg_as_json
+	protect_from_forgery except: :mssg_as_json
 	def new
 	end
 
@@ -32,7 +32,7 @@ class MessagesController < ApplicationController
 
 	def mssg_as_json
 		@message = Message.new
-		@message.text = params.require(:messages)
+		@message.text =  params.permit(:message)
 		@message.save
 		string = "http://privnote.herokuapp.com/messages/" 
 		@message.url = string + @message.id.to_s
@@ -43,14 +43,14 @@ class MessagesController < ApplicationController
 	def return_mssg_as_json
 		# in browser
 		if Message.exists?(params[:id])
-			if @message = Message.find_by(id: params[:id])
+			if @message == Message.find_by(id: params[:id])
 			  render json: { message: @message[:text] }
 			else
 			  render json: {errors: :not_found}, status: :not_found
 			end
 			@message.destroy
 		else 
-			render json: { error: "Error!Message was destroyed!" }
+		   render json: { error: "Error!Message was destroyed!" }
 		end
 	end
 
