@@ -42,7 +42,7 @@ class MessagesController < ApplicationController
 	def mssg_as_json
 	 	if is_json?
 		 	@message = Message.new
-			@message.text =  params.permit(:message)
+@message.text =  params.permit(:message)[:message]
 			@message.save
 			string = "http://privnote.herokuapp.com/messages/" 
 			@message.url = string + @message.id.to_s
@@ -56,7 +56,7 @@ class MessagesController < ApplicationController
 			@message.url = string + @message.id.to_s
 			@message.save
 			output = "<url>" + @message.url + "</url>"
-			render plain: output
+			render xml: output
 	 	end 
 	end
 
