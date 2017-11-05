@@ -15,11 +15,6 @@ class MessagesController < ApplicationController
 		id = params[:id]
 		if Message.exists?(id)
 			@message = Message.find(id)
-			respond_to do |format|
-	      		format.html # stays the same
-	  			format.json { render json: @message.to_json }
-	        	format.xml  { render :xml => @message.to_xml }
-	    	end
 	    	@message.destroy
 	    else 
 	    	# message is already destroyed
