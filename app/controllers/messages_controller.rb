@@ -31,13 +31,21 @@ class MessagesController < ApplicationController
 	end
 
 	def mssg_as_json
-		@message = Message.new
-		@message.text =  params.permit(:message)
-		@message.save
-		string = "http://privnote.herokuapp.com/messages/" 
-		@message.url = string + @message.id.to_s
-		@message.save
-		render json: { url: @message[:url] }
+		respond_to do |format|
+		format.json {
+				@message = Message.new
+				@message.text =  params.permit(:message)
+				@message.save
+				string = "http://privnote.herokuapp.com/messages/" 
+				@message.url = string + @message.id.to_s
+				@message.save}
+				render json: { url: @message[:url] } 
+		}
+		format.xml{
+			@mssg.text = Nokogiri::XML.fragment(request.body.read).content
+			render plain: @message.text
+		}
+		end 
 	end
 
 	def return_mssg_as_json
