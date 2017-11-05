@@ -54,7 +54,14 @@ class MessagesController < ApplicationController
 				@message.save
 				render json: { url: @message[:url] }
 	 		elsif xml_request?
-	 			
+	 			@message = Message.new
+	 			@message.text = Nokogiri::XML.fragment(request.body.read).content
+	 			@message.save
+				string = "http://privnote.herokuapp.com/messages/" 
+				@message.url = string + @message.id.to_s
+				@message.save
+				output = "<url>" + @message.url + "</url>"
+				render plain: output
 	 		end
 
 	 
