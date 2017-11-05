@@ -23,57 +23,43 @@ class MessagesController < ApplicationController
 	    	@message.destroy
 	    else 
 	    	# message is already destroyed
-			# @message = Message.new(:text => "The message was destroyed! You can't view it.")
-			# @message.save
+			@message = Message.new(:text => "The message was destroyed! You can't view it.")
+			@message.save
 			render :error
 		end
 		
 	end
 
-	def mssg_as_json
-					
-		# respond_to do |format|
-		# 	@message = Message.new
-		# 	@message.text =  params.permit(:message)
-		# 	@message.save
-		# 	string = "http://privnote.herokuapp.com/messages/" 
-		# 	@message.url = string + @message.id.to_s
-		# 	@message.save
-		# 	format.json  { render json: { url: @message[:url] } }
-		# 	format.xml { 
-		# 		@message = Nokogiri::XML.fragment(request.body.read).content
-		# 		render plain: @message.text
-		# 	}
-		# end
-	 		if json_request?
-		 		@message = Message.new
-				@message.text =  params.permit(:message)
-				@message.save
-				string = "http://privnote.herokuapp.com/messages/" 
-				@message.url = string + @message.id.to_s
-				@message.save
-				render json: { url: @message[:url] }
-	 		elsif xml_request?
-	 			@message = Message.new
-	 			@message.text = Nokogiri::XML.fragment(request.body.read).content
-	 			@message.save
-				string = "http://privnote.herokuapp.com/messages/" 
-				@message.url = string + @message.id.to_s
-				@message.save
-				output = "<url>" + @message.url + "</url>"
-				render plain: output
-	 		end
 
-	 
+   	def is_xml?
+        request.content_type =~ /xml/
+    end
+
+    def is_json?
+       request.content_type =~ /json/
 	end
 
-   		def xml_request?
-        request.content_type =~ /xml/
-      end
+	def mssg_as_json
+	 	if is_json?
+		 	@message = Message.new
+			@message.text =  params.permit(:message)
+			@message.save
+			string = "http://privnote.herokuapp.com/messages/" 
+			@message.url = string + @message.id.to_s
+			@message.save
+			render json: { url: @message[:url] }
+	 	elsif is_xml?
+	 		@message = Message.new
+			@message.text = Nokogiri::XML.fragment(request.body.read).content
+	 		@message.save
+			string = "http://privnote.herokuapp.com/messages/" 
+			@message.url = string + @message.id.to_s
+			@message.save
+			output = "<url>" + @message.url + "</url>"
+			render plain: output
+	 	end 
+	end
 
-      def json_request?
-        request.content_type =~ /json/
-		end
 
 	def return_mssg_as_json
 		# in browser
