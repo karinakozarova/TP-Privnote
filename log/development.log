@@ -8840,3 +8840,279 @@ Processing by MessagesController#mssg_as_json as */*
 Completed 200 OK in 40ms (Views: 0.2ms | ActiveRecord: 28.5ms)
 
 
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:29:20 +0200
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by MessagesController#mssg_as_json as */*
+  Parameters: {"message"=>"the value of the message"}
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 14ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:29:28 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:30:07 +0200
+  
+SyntaxError (/home/kari/ELSYS/GitHub/TP-Privnote/app/controllers/messages_controller.rb:67: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/messages_controller.rb:67: syntax error, unexpected end-of-input, expecting keyword_end
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:30:26 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:31:49 +0200
+Processing by MessagesController#mssg_as_json as */*
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-11-05 17:31:49.257891"], ["updated_at", "2017-11-05 17:31:49.257891"]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.3ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/102"], ["updated_at", "2017-11-05 17:31:49.271251"], ["id", 102]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 54ms (ActiveRecord: 17.7ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:31:51 +0200
+Processing by MessagesController#mssg_as_json as */*
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-11-05 17:31:51.652387"], ["updated_at", "2017-11-05 17:31:51.652387"]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.4ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/103"], ["updated_at", "2017-11-05 17:31:51.662676"], ["id", 103]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 42ms (ActiveRecord: 14.3ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:32:07 +0200
+Processing by MessagesController#mssg_as_json as */*
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2017-11-05 17:32:07.957060"], ["updated_at", "2017-11-05 17:32:07.957060"]]
+  [1m[35m (19.4ms)[0m  [1m[35mCOMMIT[0m
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 51ms (ActiveRecord: 23.8ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:32:19 +0200
+Processing by MessagesController#mssg_as_json as */*
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 32ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:32:32 +0200
+Processing by MessagesController#mssg_as_json as */*
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 32ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:32:43 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:33:06 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 21ms (Views: 1.0ms | ActiveRecord: 6.7ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:33:50 +0200
+Processing by MessagesController#mssg_as_json as */*
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 34ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:34:05 +0200
+Processing by MessagesController#mssg_as_json as */*
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:34:13 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 17ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:34:20 +0200
+Processing by MessagesController#mssg_as_json as */*
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:34:29 +0200
+Processing by MessagesController#mssg_as_json as */*
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:35:20 +0200
+Processing by MessagesController#mssg_as_json as */*
+Completed 500 Internal Server Error in 113ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `xml?' for #<MessagesController:0x00000001ea5640>):
+  
+app/controllers/messages_controller.rb:50:in `block in mssg_as_json'
+app/controllers/messages_controller.rb:48:in `mssg_as_json'
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:35:55 +0200
+Processing by MessagesController#mssg_as_json as */*
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "{}"], ["created_at", "2017-11-05 17:35:55.766462"], ["updated_at", "2017-11-05 17:35:55.766462"]]
+  [1m[35m (28.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/105"], ["updated_at", "2017-11-05 17:35:55.798162"], ["id", 105]]
+  [1m[35m (13.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 62ms (Views: 0.8ms | ActiveRecord: 43.9ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:36:11 +0200
+Processing by MessagesController#mssg_as_json as */*
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "{}"], ["created_at", "2017-11-05 17:36:11.807671"], ["updated_at", "2017-11-05 17:36:11.807671"]]
+  [1m[35m (21.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/106"], ["updated_at", "2017-11-05 17:36:11.832133"], ["id", 106]]
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 44ms (Views: 1.4ms | ActiveRecord: 24.9ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:36:42 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:36:48 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Parameters: {"message"=>"the value of the message"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "{\"message\"=>\"the value of the message\"}"], ["created_at", "2017-11-05 17:36:48.725433"], ["updated_at", "2017-11-05 17:36:48.725433"]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/107"], ["updated_at", "2017-11-05 17:36:48.740528"], ["id", 107]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 33ms (Views: 0.6ms | ActiveRecord: 17.8ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:36:51 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:37:28 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Rendering text template
+  Rendered text template (0.0ms)
+Completed 406 Not Acceptable in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/messages_controller.rb:48:in `mssg_as_json'
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:37:30 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Parameters: {"message"=>"the value of the message"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "{\"message\"=>\"the value of the message\"}"], ["created_at", "2017-11-05 17:37:30.498935"], ["updated_at", "2017-11-05 17:37:30.498935"]]
+  [1m[35m (14.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/108"], ["updated_at", "2017-11-05 17:37:30.518330"], ["id", 108]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+Completed 406 Not Acceptable in 36ms (Views: 2.1ms | ActiveRecord: 19.4ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/messages_controller.rb:48:in `mssg_as_json'
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:37:42 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Parameters: {"message"=>"the value of the message"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "{\"message\"=>\"the value of the message\"}"], ["created_at", "2017-11-05 17:37:42.532280"], ["updated_at", "2017-11-05 17:37:42.532280"]]
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/109"], ["updated_at", "2017-11-05 17:37:42.549846"], ["id", 109]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 406 Not Acceptable in 41ms (Views: 0.3ms | ActiveRecord: 19.4ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/messages_controller.rb:48:in `mssg_as_json'
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:37:49 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Parameters: {"message"=>"the value of the message"}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "{\"message\"=>\"the value of the message\"}"], ["created_at", "2017-11-05 17:37:49.177740"], ["updated_at", "2017-11-05 17:37:49.177740"]]
+  [1m[35m (16.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/110"], ["updated_at", "2017-11-05 17:37:49.199852"], ["id", 110]]
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 406 Not Acceptable in 48ms (Views: 0.3ms | ActiveRecord: 23.2ms)
+
+
+  
+ActionController::UnknownFormat (ActionController::UnknownFormat):
+  
+app/controllers/messages_controller.rb:48:in `mssg_as_json'
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:38:31 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Parameters: {"message"=>"the value of the message"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "{\"message\"=>\"the value of the message\"}"], ["created_at", "2017-11-05 17:38:31.895694"], ["updated_at", "2017-11-05 17:38:31.895694"]]
+  [1m[35m (16.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/111"], ["updated_at", "2017-11-05 17:38:31.916904"], ["id", 111]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 43ms (Views: 0.3ms | ActiveRecord: 23.1ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:39:15 +0200
+  
+SyntaxError (/home/kari/ELSYS/GitHub/TP-Privnote/app/controllers/messages_controller.rb:86: syntax error, unexpected keyword_end, expecting end-of-input):
+  
+app/controllers/messages_controller.rb:86: syntax error, unexpected keyword_end, expecting end-of-input
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:39:22 +0200
+Processing by MessagesController#mssg_as_json as */*
+  Parameters: {"message"=>"the value of the message"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "messages" ("text", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["text", "{\"message\"=>\"the value of the message\"}"], ["created_at", "2017-11-05 17:39:22.408706"], ["updated_at", "2017-11-05 17:39:22.408706"]]
+  [1m[35m (13.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "messages" SET "url" = $1, "updated_at" = $2 WHERE "messages"."id" = $3[0m  [["url", "http://privnote.herokuapp.com/messages/112"], ["updated_at", "2017-11-05 17:39:22.426483"], ["id", 112]]
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 40ms (Views: 0.7ms | ActiveRecord: 24.5ms)
+
+
+Started POST "/messages/api" for 127.0.0.1 at 2017-11-05 19:39:25 +0200
+Processing by MessagesController#mssg_as_json as */*
+No template found for MessagesController#mssg_as_json, rendering head :no_content
+Completed 204 No Content in 28ms (ActiveRecord: 0.0ms)
+
+

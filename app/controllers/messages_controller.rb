@@ -15,6 +15,11 @@ class MessagesController < ApplicationController
 		id = params[:id]
 		if Message.exists?(id)
 			@message = Message.find(id)
+			respond_to do |format|
+	      		format.html # stays the same
+	  			format.json { render json: @message.to_json }
+	        	format.xml  { render :xml => @message.to_xml }
+	    	end
 	    	@message.destroy
 	    else 
 	    	# message is already destroyed
@@ -27,20 +32,41 @@ class MessagesController < ApplicationController
 
 	def mssg_as_json
 					
-		respond_to do |format|
-			@message = Message.new
-			@message.text =  params.permit(:message)
-			@message.save
-			string = "http://privnote.herokuapp.com/messages/" 
-			@message.url = string + @message.id.to_s
-			@message.save
-			format.json  { render json: { url: @message[:url] } }
-			format.xml { 
-				@message = Nokogiri::XML.fragment(request.body.read).content
-				render plain: @message.text
-			}
-		end
+		# respond_to do |format|
+		# 	@message = Message.new
+		# 	@message.text =  params.permit(:message)
+		# 	@message.save
+		# 	string = "http://privnote.herokuapp.com/messages/" 
+		# 	@message.url = string + @message.id.to_s
+		# 	@message.save
+		# 	format.json  { render json: { url: @message[:url] } }
+		# 	format.xml { 
+		# 		@message = Nokogiri::XML.fragment(request.body.read).content
+		# 		render plain: @message.text
+		# 	}
+		# end
+	 		if json_request?
+		 		@message = Message.new
+				@message.text =  params.permit(:message)
+				@message.save
+				string = "http://privnote.herokuapp.com/messages/" 
+				@message.url = string + @message.id.to_s
+				@message.save
+				render json: { url: @message[:url] }
+	 		elsif xml_request?
+	 			
+	 		end
+
+	 
 	end
+
+   		def xml_request?
+        request.content_type =~ /xml/
+      end
+
+      def json_request?
+        request.content_type =~ /json/
+		end
 
 	def return_mssg_as_json
 		# in browser
